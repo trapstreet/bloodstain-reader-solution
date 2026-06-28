@@ -1,8 +1,8 @@
 # Bloodstain Reader — closed-book forensic-vision solution.
 # Run:  tp run bloodstain-reader      (needs ANTHROPIC_API_KEY in .env)
-name: claude-opus-4-8-vision
+name: claude-sonnet-4-6-vision
 profile:
-  model: claude-opus-4-8
+  model: claude-sonnet-4-6
   framework: claude-code
 cmd: sh -c 'set -a && [ -f .env ] && . .env; set +a && uv run solution.py'
 manifest_envvar: TRAP_MANIFEST

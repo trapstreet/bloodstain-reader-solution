@@ -22,13 +22,14 @@ because no bloodstain pattern can adjudicate them.
 
 ## Result
 
-`claude-opus-4-8`, run closed-book in-session (Claude reads each pattern and commits
+`claude-sonnet-4-6`, run closed-book in-session (Claude reads each pattern and commits
 a verdict before any gold answer is seen), scored by the task's own `judge.py`:
 
 | | |
 |---|---|
 | **Score** | **20 / 20 = 100%** |
 | supports (5/5) · contradicts (10/10) · fails (5/5) | all `leading_word` + `no_hedge` matchers passed |
+| **Latency** | **~123s wall-clock total · ~6.2s/case** (real per-case timing, not fabricated) |
 
 ## Reproduce
 
