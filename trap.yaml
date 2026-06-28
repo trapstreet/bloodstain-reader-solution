@@ -1,0 +1,14 @@
+# Bloodstain Reader — closed-book forensic-vision solution.
+# Run:  tp run bloodstain-reader      (needs ANTHROPIC_API_KEY in .env)
+name: claude-opus-4-8-vision
+profile:
+  model: claude-opus-4-8
+  framework: claude-code
+cmd: sh -c 'set -a && [ -f .env ] && . .env; set +a && uv run solution.py'
+manifest_envvar: TRAP_MANIFEST
+timeout: 120
+
+tasks:
+  bloodstain-reader:
+    # Pinned to the exact task version registered on the leaderboard.
+    source: git+https://github.com/trapstreet/trapstreet-tasks@11c03df8c1b802ed4e3ca9a9778f00e6fce1a586#subdirectory=tasks/bloodstain_reader
